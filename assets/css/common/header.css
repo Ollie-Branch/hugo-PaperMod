@@ -1,11 +1,19 @@
+#theme-toggle > svg {
+    fill:var(--primary);
+}
+.header {
+    display:flex;
+    justify-content: center;
+}
+
 .nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: calc(var(--nav-width) + var(--gap) * 2);
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    line-height: var(--header-height);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-inline-start:auto;
+    margin-inline-end:auto;
+    max-width:calc(var(--main-width) + var(--gap) * 2);
+    margin-top:32px
 }
 
 .nav a {
@@ -42,11 +50,13 @@ button#theme-toggle {
 }
 
 [data-theme="dark"] #moon {
-    display: none;
+  vertical-align:middle;
+  display:none
 }
 
 [data-theme="light"] #sun {
-    display: none;
+  vertical-align:middle;
+  display:none
 }
 
 #menu {
@@ -67,6 +77,19 @@ button#theme-toggle {
 #menu .active {
     font-weight: 500;
     border-bottom: 2px solid currentColor;
+}
+
+#menu > li {
+  padding-left:24px;
+  padding-right:24px;
+  padding-top:8px;
+  padding-bottom:8px;
+  background:var(--nav2-link);
+  border-radius:8px;
+  margin:4px;
+  box-shadow:
+    inset 1px 1px 2px var(--light-corner),
+    1px 1px 2px var(--dark-corner);
 }
 
 .lang-switch li,

@@ -4,8 +4,14 @@
 }
 
 .post-title {
-    margin-bottom: 2px;
-    font-size: 40px;
+    font-size:40px;
+    margin:12px;
+    border-radius:12px;
+    background-image:linear-gradient(to bottom right, var(--entry), var(--entry-2));
+    box-shadow:
+        inset 1px 1px 2px var(--light-corner),
+        1px 1px 2px var(--dark-corner);
+    padding:12px;
 }
 
 .post-description {
@@ -15,8 +21,11 @@
 
 .post-meta,
 .breadcrumbs {
-    color: var(--secondary);
-    font-size: 14px;
+    color:var(--secondary);
+    font-size:14px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
 }
 
 .breadcrumbs {
@@ -30,8 +39,10 @@
 }
 
 .post-meta .i18n_list li {
-    list-style: none;
-    margin: auto 3px;
+    display:inline-flex;
+    list-style:none;
+    margin:auto 3px;
+    box-shadow:0 1px 0 var(--secondary)
 }
 
 .breadcrumbs a {
@@ -40,7 +51,6 @@
 
 .post-content {
     color: var(--content);
-    margin: 30px 0;
 }
 
 .post-content h3,
@@ -261,11 +271,14 @@
 }
 
 .toc {
-    margin-bottom: var(--content-gap);
-    border: 1px solid var(--border);
-    background: var(--code-bg);
-    border-radius: var(--radius);
-    padding: 0.4em;
+    margin:0 2px 40px;
+    border:1px solid var(--border);
+    background:var(--code-bg);
+    box-shadow:
+        inset 1px 1px 2px var(--light-corner),
+        1px 1px 2px var(--dark-corner);
+    border-radius:var(--radius);
+    padding:.4em
 }
 
 [data-theme="dark"] .toc {
@@ -273,9 +286,9 @@
 }
 
 .toc details summary {
-    cursor: zoom-in;
-    margin-inline-start: 10px;
-    user-select: none;
+    cursor:zoom-in;
+    margin-inline-start:10px;
+    user-select:none
 }
 
 .toc details[open] summary {
