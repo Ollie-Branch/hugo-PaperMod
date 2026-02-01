@@ -60,6 +60,9 @@ button#theme-toggle {
 }
 
 #menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     list-style: none;
     word-break: keep-all;
     overflow-x: auto;

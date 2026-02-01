@@ -35,6 +35,8 @@
 
 .post-entry {
     position: relative;
+    max-width:calc(var(--main-width) + var(--gap) * 2);
+    margin: auto;
     margin-bottom: var(--gap);
     padding: var(--gap);
     background: var(--entry);
